@@ -12,7 +12,7 @@ import React from "react";
 import { style } from "@/app/styles/modal-auth/modalStyle";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
-import { FirebaseAuth } from "../../utils/Firebase-auth";
+import { FirebaseAuth } from "@/app/utils/Firebase-auth";
 
 const logIn = (props) => {
   const { open, handleClose, setIsAuthenticated, isAuthenticated } = props;

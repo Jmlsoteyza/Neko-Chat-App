@@ -10,7 +10,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { FirebaseAuth } from "../../utils/Firebase-auth";
+import { FirebaseAuth } from "@/app/utils/Firebase-auth";
 
 const Signup = ({
   newUserOpen,

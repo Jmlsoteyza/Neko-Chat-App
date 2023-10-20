@@ -1,4 +1,4 @@
-import { FirebaseDb } from "../../utils/FirebaseDb-chatApp";
+import { FirebaseDb } from "@/app/utils/FirebaseDb-chatApp";
 import ChatRoom from "./ChatRoom";
 
 export default function Chat() {
