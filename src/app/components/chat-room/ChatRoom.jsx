@@ -3,6 +3,9 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import "../../styles/Chat.css";
 
+
+// ChatRoom component that displays chat messages and allows sending new messages
+// Where the functions from firebaseDB file was imported here.
 export default function ChatRoom({
   setNewMessage,
   newMessage,

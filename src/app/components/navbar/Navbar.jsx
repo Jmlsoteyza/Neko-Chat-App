@@ -3,15 +3,23 @@ import React, { useState } from "react";
 import { AppBar, Box, Toolbar, Typography, Button, Stack } from "@mui/material";
 import LogIn from "../authentication/LogIn";
 import dynamic from "next/dynamic";
+import Signup from "../authentication/Signup";
 
 const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
   const SignOutUser = dynamic(() => import("../authentication/SignOut"));
 
-  const [open, setOpen] = useState(false); // For sign up modal
+  const [newUserOpen, setNewUserOpen] = useState(false); // Boolean function for sign up modal
+  const [open, setOpen] = useState(false); // Boolean function for sign in modal
 
-  // Initialize to open the sign in when the button is click
+  // Initialize to open the sign in when the button is clicked
+
+  //I used this handle open for signIn to open up the modal
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  //And this is for signUp modal
+  const handleNewUserOpen = () => setNewUserOpen(true);
+  const handleNewUserClose = () => setNewUserOpen(false);
 
   return (
     <div>
@@ -46,7 +54,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
               {!isAuthenticated ? (
                 <Stack
                   direction="row"
-                  spacing={1}
+                  spacing={1.5}
                   component="div"
                   variant="div"
                 >
@@ -56,6 +64,14 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
                     onClick={handleOpen}
                   >
                     Sign in
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    color="inherit"
+                    sx={{ color: "#111", background: "#fff" }}
+                    onClick={handleNewUserOpen}
+                  >
+                    Sign up
                   </Button>
                 </Stack>
               ) : (
@@ -71,6 +87,14 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
           open={open}
           setIsAuthenticated={setIsAuthenticated}
           isAuthenticated={isAuthenticated}
+        />
+      )}
+      {newUserOpen && (
+        <Signup
+          setIsAuthenticated={setIsAuthenticated}
+          isAuthenticated={isAuthenticated}
+          newUserOpen={newUserOpen}
+          handleNewUserClose={handleNewUserClose}
         />
       )}
     </div>

@@ -2,6 +2,8 @@
 import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 
+//This component file is only for typography and designs
+
 const Hero = () => {
   return (
     <Container

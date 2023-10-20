@@ -13,11 +13,13 @@ import {
 import { auth, database } from "./firebase-config";
 import { useEffect, useState } from "react";
 
+// Define a function that sets up a Firebase Firestore database for handling chat messages
 export const firebaseDb = () => {
+  // Initialize state variables for the new message, and the list of messages
   const [newMessage, setNewMessage] = useState("");
   const [messages, setMessages] = useState([]);
 
-  //add document into collections
+  // Create a reference to the "messages" collection in the Firestore database
   const messageRef = collection(database, "messages");
 
   const handleSubmit = async (e) => {
@@ -35,7 +37,7 @@ export const firebaseDb = () => {
     setNewMessage("");
   };
 
-  // received the message to a chatroom or to each users
+  // Listen for changes in the "messages" collection and update the messages list
   useEffect(() => {
     const queryMessages = query(
       messageRef,
@@ -43,6 +45,7 @@ export const firebaseDb = () => {
       orderBy("createdAt")
     );
 
+    // Subscribe to real-time updates using onSnapshot
     const unsubscribe = onSnapshot(queryMessages, (snapshot) => {
       let messages = [];
       snapshot.forEach((doc) => {
@@ -50,8 +53,9 @@ export const firebaseDb = () => {
       });
       setMessages(messages);
     });
-    return () => unsubscribe();
+    return () => unsubscribe(); //used this to cleanup the onSnapshot
   }, []);
 
+  //Export the functions to each components.
   return { handleSubmit, setNewMessage, newMessage, messages };
 };
