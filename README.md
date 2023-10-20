@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">Neko Chat App</h1>
 
-<img src="../../photo/Neko-chat-App.png">
+![Neko Chat App](../../photo/Neko-chat-App.png)
 
 This app is designed for communication in a shared room, but in order to participate, you must log in first.
 
@@ -14,7 +14,7 @@ After registering your email and password, your information will be securely sto
 
 This enables you to log in with the same credentials you used during the registration process.
 
-<img src="../photo/login neko.png" alt="login-page">
+![Login Page](../../photo/login%20neko.png)
 
 ## Chat App
 
@@ -22,4 +22,4 @@ In the Chat App, you can engage in real-time conversations with other users.
 Simply type your message in the chat input box and click 'Send,'
 and your message will instantly appear in the chat box for others to see.
 
-<img src="../photo/neko chat pic.png" alt="neko chat app!" />
+![Neko Chat App](../photo/neko%20chat%20pic.png)
