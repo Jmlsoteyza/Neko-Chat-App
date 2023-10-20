@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 style="text-align: center;">Neko Chat App</h1>
 
-## Getting Started
+<img src="../../photo/Neko-chat-App.png">
 
-First, run the development server:
+This app is designed for communication in a shared room, but in order to participate, you must log in first.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## How to sign up?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To get started, click the registration button. After signing up, you will be automatically logged into the website.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+You can also log in to the website using your GitHub or Gmail accounts you can access it by clicking the "sign in" button.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+After registering your email and password, your information will be securely stored in Firebase Authentication.
 
-## Learn More
+This enables you to log in with the same credentials you used during the registration process.
 
-To learn more about Next.js, take a look at the following resources:
+<img src="../photo/login neko.png" alt="login-page">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Chat App
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+In the Chat App, you can engage in real-time conversations with other users.
+Simply type your message in the chat input box and click 'Send,'
+and your message will instantly appear in the chat box for others to see.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img src="../photo/neko chat pic.png" alt="neko chat app!" />
