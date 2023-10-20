@@ -7,13 +7,12 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./utils/firebase-config";
 
 export default function Home() {
-  const cookies = new Cookies();
-
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const isSSR = typeof window === "undefined";
 
   useEffect(() => {
+    const cookies = new Cookies();
     if (isSSR) {
       setIsAuthenticated(!!cookies.get("user-token"));
     } else {

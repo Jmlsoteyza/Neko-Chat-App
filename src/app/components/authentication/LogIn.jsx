@@ -62,7 +62,7 @@ const logIn = (props) => {
               />
             </Stack>
             <Typography component="p" fontSize="14px" sx={{ pt: "3.5px" }}>
-              Don't have an account?
+              Don&apos;t have an account?
               <Typography
                 component="span"
                 color="#0069c2"
