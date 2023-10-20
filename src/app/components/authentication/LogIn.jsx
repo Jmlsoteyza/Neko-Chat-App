@@ -17,7 +17,7 @@ import { FirebaseAuth } from "../../utils/Firebase-auth";
 const logIn = (props) => {
   const { open, handleClose, setIsAuthenticated, isAuthenticated } = props;
 
-  // In this section, we import functions from the 'firebase-auth' file
+  // In this section, I import functions from the 'firebase-auth' file
   // and use them to set up user authentication. We're also passing the 'setIsAuthenticated'
   // function from this component to allow communication between the two components.
   const {
