@@ -1,0 +1,9 @@
+.inputMessage:active {
+    border: none;
+    outline: none;
+}
+
+.inputMessage:focus {
+    border: none;
+    outline: none;
+}
