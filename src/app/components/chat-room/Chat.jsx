@@ -1,8 +1,8 @@
-import { firebaseDb } from "@/app/utils/firebaseDb-chatApp";
+import { FirebaseDb } from "../../utils/FirebaseDb-chatApp";
 import ChatRoom from "./ChatRoom";
 
 export default function Chat() {
-  const { handleSubmit, setNewMessage, newMessage, messages } = firebaseDb();
+  const { handleSubmit, setNewMessage, newMessage, messages } = FirebaseDb();
 
   return (
     <div>

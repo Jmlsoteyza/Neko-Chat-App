@@ -28,7 +28,7 @@ export default function Home() {
 
       return () => unsubscribe();
     }
-  }, [cookies, isSSR]);
+  }, [isSSR]);
 
   return (
     <>

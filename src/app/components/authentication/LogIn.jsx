@@ -12,7 +12,7 @@ import React from "react";
 import { style } from "@/app/styles/modal-auth/modalStyle";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
-import { firebaseAuth } from "@/app/utils/firebase-auth";
+import { FirebaseAuth } from "../../utils/Firebase-auth";
 
 const logIn = (props) => {
   const { open, handleClose, setIsAuthenticated, isAuthenticated } = props;
@@ -28,7 +28,7 @@ const logIn = (props) => {
     password,
     setPassword,
     signInEmailAndPassword,
-  } = firebaseAuth(setIsAuthenticated);
+  } = FirebaseAuth(setIsAuthenticated);
 
   //if it's not authenticated render LogIn components otherwise render null
   if (!isAuthenticated) {
