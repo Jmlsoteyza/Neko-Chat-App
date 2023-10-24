@@ -14,7 +14,7 @@ import { auth, database } from "./firebase-config";
 import { useEffect, useState } from "react";
 
 // Define a function that sets up a Firebase Firestore database for handling chat messages
-export const FirebaseDb = () => {
+export const firebaseDb = () => {
   // Initialize state variables for the new message, and the list of messages
   const [newMessage, setNewMessage] = useState("");
   const [messages, setMessages] = useState([]);

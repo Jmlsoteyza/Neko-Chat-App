@@ -10,7 +10,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { FirebaseAuth } from "@/app/utils/Firebase-auth";
+import { firebaseAuth } from "@/app/utils/firebase-auth";
 
 const Signup = ({
   newUserOpen,
@@ -24,7 +24,7 @@ const Signup = ({
     setNewUserEmail,
     setNewUserPassword,
     signUp,
-  } = FirebaseAuth(setIsAuthenticated);
+  } = firebaseAuth(setIsAuthenticated);
 
   if (!isAuthenticated) {
     return (

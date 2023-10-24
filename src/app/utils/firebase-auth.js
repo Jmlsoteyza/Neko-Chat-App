@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 import { useState } from "react";
 
-export const FirebaseAuth = ({ setIsAuthenticated }) => {
+export const firebaseAuth = ({ setIsAuthenticated }) => {
   // This state is for sign in method where I returned it and pass to signIn Component.
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

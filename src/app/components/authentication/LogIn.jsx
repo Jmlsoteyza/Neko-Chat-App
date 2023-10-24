@@ -12,12 +12,12 @@ import React from "react";
 import { style } from "@/app/styles/modal-auth/modalStyle";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
-import { FirebaseAuth } from "@/app/utils/Firebase-auth";
+import { firebaseAuth } from "@/app/utils/firebase-auth";
 
 const logIn = (props) => {
   const { open, handleClose, setIsAuthenticated, isAuthenticated } = props;
 
-  // In this section, I import functions from the 'firebase-auth' file
+  // In this section, we import functions from the 'firebase-auth' file
   // and use them to set up user authentication. We're also passing the 'setIsAuthenticated'
   // function from this component to allow communication between the two components.
   const {
@@ -28,7 +28,7 @@ const logIn = (props) => {
     password,
     setPassword,
     signInEmailAndPassword,
-  } = FirebaseAuth(setIsAuthenticated);
+  } = firebaseAuth(setIsAuthenticated);
 
   //if it's not authenticated render LogIn components otherwise render null
   if (!isAuthenticated) {
@@ -62,7 +62,7 @@ const logIn = (props) => {
               />
             </Stack>
             <Typography component="p" fontSize="14px" sx={{ pt: "3.5px" }}>
-              Don&apos;t have an account?
+              Don't have an account?
               <Typography
                 component="span"
                 color="#0069c2"
