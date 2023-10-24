@@ -101,7 +101,7 @@ const LogIn = (props) => {
               />
             </Stack>
             <Typography component="p" fontSize="14px" sx={{ pt: "3.5px" }}>
-              Don`&apos;`t have an account?
+              Don&apos;t have an account?
               <Typography
                 component="span"
                 color="#0069c2"
@@ -113,9 +113,7 @@ const LogIn = (props) => {
                     cursor: "pointer",
                   },
                 }}
-              >
-                Signup `&#39;`
-              </Typography>
+              > Signup </Typography>
             </Typography>
             <Box sx={{ mt: 3 }}>
               <Stack>
