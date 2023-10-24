@@ -4,6 +4,8 @@
 
 This app is designed for communication in a shared room, but in order to participate, you must log in first.
 
+Livesite: https://nekochatapp.vercel.app/
+
 ## How to sign up?
 
 To get started, click the registration button. After signing up, you will be automatically logged into the website.
