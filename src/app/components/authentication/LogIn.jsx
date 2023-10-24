@@ -20,7 +20,7 @@ import {
   githubProvider,
 } from "@/app/utils/firebase-config";
 
-const logIn = (props) => {
+const LogIn = (props) => {
   const { open, handleClose, setIsAuthenticated, isAuthenticated } = props;
   const cookies = new Cookies();
 
@@ -179,4 +179,4 @@ const logIn = (props) => {
   return null;
 };
 
-export default logIn;
+export default LogIn;
