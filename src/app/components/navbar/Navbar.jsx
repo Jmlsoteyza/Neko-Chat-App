@@ -67,8 +67,14 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
                   </Button>
                   <Button
                     variant="outlined"
-                    color="inherit"
-                    sx={{ color: "#111", background: "#fff" }}
+                    sx={{
+                      background: "#fff",
+                      color: "#111",
+                      paddingInline: "15px",
+                      "&:hover": {
+                        color: "#fff",
+                      },
+                    }}
                     onClick={handleNewUserOpen}
                   >
                     Sign up
