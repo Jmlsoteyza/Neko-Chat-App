@@ -114,7 +114,7 @@ const LogIn = (props) => {
                   },
                 }}
               >
-                Signup
+                Signup `&#39;`
               </Typography>
             </Typography>
             <Box sx={{ mt: 3 }}>
