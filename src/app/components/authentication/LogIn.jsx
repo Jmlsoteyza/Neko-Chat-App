@@ -46,7 +46,7 @@ const LogIn = (props) => {
   // Function to sign in a user with Google authentication
   const signInWithGoogle = async () => {
     try {
-      const resultToken = await signInWithGoogle(auth, googleProvider);
+      const resultToken = await signInWithPopup(auth, googleProvider);
       cookies.set("user-token", resultToken.user.refreshToken);
       setIsAuthenticated(true);
     } catch (error) {
