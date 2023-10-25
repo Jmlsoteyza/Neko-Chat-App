@@ -3,9 +3,7 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import "../../styles/Chat.css";
 
-
 // ChatRoom component that displays chat messages and allows sending new messages
-// Where the functions from firebaseDB file was imported here.
 export default function ChatRoom({
   setNewMessage,
   newMessage,
@@ -18,7 +16,9 @@ export default function ChatRoom({
         component="div"
         sx={{
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
+          height: "100vh",
+          width: "100%",
           alignItems: "center",
           background: "#111",
         }}
@@ -29,7 +29,7 @@ export default function ChatRoom({
             maxWidth: "1450px",
             width: "100%",
             overflowY: "auto",
-            height: "755px",
+            flexGrow: 1,
             background: "#111",
             p: "30px",
           }}
@@ -81,50 +81,50 @@ export default function ChatRoom({
             </Stack>
           ))}
         </Box>
-      </Box>
-      <Box
-        sx={{
-          background: "#131316",
-          height: "97px",
-          padding: "24px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          borderTop: "1px solid #808080",
-        }}
-      >
-        <input
-          className="inputMessage"
-          style={{
-            background: "white",
-            color: "#111",
-            border: "none",
-            paddingBlock: "23px",
-            paddingInline: "15px",
-            width: "100%",
-            maxWidth: "950px",
-            height: "1px",
-            borderRadius: "4px",
-          }}
-          type="text"
-          placeholder="Send a message..."
-          onChange={(e) => setNewMessage(e.target.value)}
-          value={newMessage}
-        />
-        <Button
+
+        <Box
           sx={{
-            background: "#fff",
-            color: "#111",
-            paddingInline: "25px",
-            ml: "20px",
-            "&:hover": {
-              color: "#fff",
-            },
+            background: "#131316",
+            padding: "24px 100px 105px 100px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            borderTop: "1px solid #808080",
+            width: "100%",
           }}
-          type="submit"
         >
-          Send
-        </Button>
+          <input
+            className="inputMessage"
+            style={{
+              background: "white",
+              color: "#111",
+              border: "none",
+              paddingBlock: "15px",
+              paddingInline: "15px",
+              width: "100%",
+              maxWidth: "950px",
+              borderRadius: "4px",
+            }}
+            type="text"
+            placeholder="Send a message..."
+            onChange={(e) => setNewMessage(e.target.value)}
+            value={newMessage}
+          />
+          <Button
+            sx={{
+              background: "#fff",
+              color: "#111",
+              paddingInline: "25px",
+              ml: "20px",
+              "&:hover": {
+                color: "#fff",
+              },
+            }}
+            type="submit"
+          >
+            Send
+          </Button>
+        </Box>
       </Box>
     </form>
   );

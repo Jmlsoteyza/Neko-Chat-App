@@ -6,7 +6,7 @@ const Hero = dynamic(() => import("../hero/Hero"));
 const Chat = dynamic(() => import("../chat-room/Chat"));
 
 export default function App({ isAuthenticated }) {
-  // it checks if the user is logged in or not, if it's render Chatroom if not render hero.
+  // it checks if the it's logged in or not, if it's logged in render <Chat /> otherwise render <Hero />
   if (!isAuthenticated) {
     return <Hero />
   }
