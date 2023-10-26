@@ -7,3 +7,8 @@
     border: none;
     outline: none;
 }
+
+.chat-color {
+    -webkit-text-fill-color: #111;
+    -webkit-opacity: 1;
+}

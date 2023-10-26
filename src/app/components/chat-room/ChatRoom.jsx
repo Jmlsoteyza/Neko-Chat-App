@@ -62,6 +62,7 @@ export default function ChatRoom({
                   {message.user}
                 </Typography>
                 <Typography
+                  className="chat-color"
                   sx={{
                     background: "#f5f5f5",
                     borderRadius: "12px",
@@ -69,7 +70,7 @@ export default function ChatRoom({
                     pt: "5px",
                     pb: "5px",
                     textAlign: "center",
-                    color: "inherit",
+                    color: "#111",
                     display: "inline-block",
                     width: "auto",
                     mt: "8px",
