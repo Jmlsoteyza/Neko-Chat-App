@@ -17,7 +17,7 @@ export default function ChatRoom({
         sx={{
           display: "flex",
           flexDirection: "column",
-          height: "100vh",
+          height: "100%",
           width: "100%",
           alignItems: "center",
           background: "#111",
@@ -69,7 +69,7 @@ export default function ChatRoom({
                     pt: "5px",
                     pb: "5px",
                     textAlign: "center",
-                    color: "#00000",
+                    color: "inherit",
                     display: "inline-block",
                     width: "auto",
                     mt: "8px",
@@ -96,7 +96,7 @@ export default function ChatRoom({
           <input
             className="inputMessage"
             style={{
-              background: "white",
+              backgroundColor: "white",
               color: "#111",
               border: "none",
               paddingBlock: "15px",

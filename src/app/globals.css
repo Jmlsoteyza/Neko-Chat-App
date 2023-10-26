@@ -11,6 +11,15 @@ body {
   background-color: black;
   font-family: "fantasy";
   overflow: hidden;
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+form {
+  height: inherit;
 }
 
 a {

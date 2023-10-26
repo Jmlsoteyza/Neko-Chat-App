@@ -54,13 +54,13 @@ export default function Chat() {
   }, []);
 
   return (
-    <div>
+    <>
       <ChatRoom
         handleSubmit={handleSubmit}
         setNewMessage={setNewMessage}
         newMessage={newMessage}
         messages={messages}
       />
-    </div>
+    </>
   );
 }
