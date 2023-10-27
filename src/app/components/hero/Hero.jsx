@@ -1,14 +1,13 @@
 "use client";
 import { Box, Container, Typography } from "@mui/material";
 import React from "react";
-import "./Hero.css"
+import "./Hero.css";
 
 //This component file is only for typography and designs
 
 const Hero = () => {
   return (
     <Container
-      className="hero-container"
       sx={{
         direction: "column",
         alignItems: "center",
@@ -16,6 +15,7 @@ const Hero = () => {
       }}
     >
       <Box
+        className="hero-text-container"
         justifyContent="center"
         alignItems="center"
         sx={{
